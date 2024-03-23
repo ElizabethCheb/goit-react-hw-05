@@ -1,0 +1,29 @@
+.listli {
+    display: flex;
+    justify-content: center
+}
+.list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .list > li {
+    width: calc(100% / 3);
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  @media (max-width: 768px) {
+    .list > li {
+      width: calc(100% / 2);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .list > li {
+      width: 100%;
+    }
+  }
+  
