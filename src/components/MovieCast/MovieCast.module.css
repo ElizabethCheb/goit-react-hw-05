@@ -5,3 +5,7 @@ li {
 .span {
     display: flex;
 }
+.actor {
+    display: flex;
+    flex-direction: column
+}
