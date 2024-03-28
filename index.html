@@ -1,45 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="/vite.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vite + React</title>
-</head>
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-
-  <!-- Script to clean CSS before deployment -->
-  <script>
-    // Function to clean CSS
-    function cleanCSS() {
-      // Fetch your CSS file
-      fetch('/index.css')
-        .then(response => response.text())
-        .then(css => {
-          // Modify CSS here, for example:
-          // Remove all comments
-          css = css.replace(/\/\*[\s\S]*?\*\//g, '');
-          
-          // Remove all rules for a specific selector
-          css = css.replace(/\.your-selector[\s\S]*?\}/g, '');
-
-          // Here you can add more transformations as needed
-
-          // Write the cleaned CSS back to the file
-          fetch('/index.css', {
-            method: 'PUT',
-            body: css
-          });
-        })
-        .catch(error => {
-          console.error('Error cleaning CSS:', error);
-        });
-    }
-
-    // Clean CSS before deployment
-    cleanCSS();
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
